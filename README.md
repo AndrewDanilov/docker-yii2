@@ -24,7 +24,7 @@ Install Yii2
 Start bash within container:
 
 ```
-docker exec -it php_yii bash
+docker exec -it yii_php bash
 ```
 
 Run yii installation with container console:
