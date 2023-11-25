@@ -45,7 +45,22 @@ Initialize yii:
 php init
 ```
 
-Run migrations:
+Before using the database and migration, you need to configure the database configuration. In /common/config/main-local.php find this section:
+
+```
+'components' => [
+    'db' => [
+        'class' => \yii\db\Connection::class,
+        'dsn' => 'mysql:host=yii_mysql;dbname=yii',
+        'username' => 'yii',
+        'password' => 'yii',
+        'charset' => 'utf8',
+    ],
+```
+
+Change `host` from `localhost` to `yii_mysql`, dbname, username and password set to `yii`, 
+
+Then you can run migrations:
 
 ```
 php yii migrate
