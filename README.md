@@ -21,7 +21,7 @@ docker compose up -d
 Install Yii2
 ------------
 
-Start bash within container:
+You need to run the following commands from the console of the yii_php container. To start bash within docker container, use the command:
 
 ```
 docker exec -it yii_php bash
@@ -33,11 +33,22 @@ Run yii installation with container console:
 composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-project
 ```
 
-Initialize yii:
+Change current directory to project root:
 
 ```
 cd yii-project
+```
+
+Initialize yii:
+
+```
 php init
+```
+
+Run migrations:
+
+```
+php yii migrate
 ```
 
 Now you can open your app via:
