@@ -1,7 +1,3 @@
-networks:
-  yii:
-    name: yii
-
 services:
   nginx:
     container_name: yii_nginx
@@ -30,8 +26,8 @@ services:
     image: mysql:latest
     volumes:
       - ./www:/var/www
-      - ./mysql-data:/var/lib/mysql
       - ./my.cnf:/etc/mysql/conf.d/my.cnf
+      - db:/var/lib/mysql
     environment:
       - MYSQL_USER=yii
       - MYSQL_PASSWORD=yii
@@ -40,3 +36,9 @@ services:
     command: ["--default-authentication-plugin=mysql_native_password"]
     networks:
       - yii
+
+networks:
+  yii:
+
+volumes:
+  db:
