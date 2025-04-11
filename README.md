@@ -69,3 +69,8 @@ php yii migrate
 Now you can open your app via:
 
 http://localhost/ and http://admin.localhost/
+
+
+Tutorial on Youtube:
+
+https://www.youtube.com/watch?v=gVGfegSLg14
